@@ -1,1 +1,0 @@
-{"virtualbox":{"/tmp/results":{"guestpath":"/tmp/results","hostpath":"/Users/dm/Documents/DevOps/CHEF/INFRA/lcr-effortless-config-getting-started/results","disabled":false,"__vagrantfile":true},"/tmp/omnibus/cache":{"create":true,"guestpath":"/tmp/omnibus/cache","hostpath":"/Users/dm/.kitchen/cache","disabled":false,"__vagrantfile":true}}}
