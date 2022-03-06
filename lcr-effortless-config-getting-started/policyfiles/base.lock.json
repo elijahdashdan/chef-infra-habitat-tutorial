@@ -1,0 +1,193 @@
+{
+  "revision_id": "595067494fa22a823b4f6756277349cae78cbfeec05e6cf48c4c7c13dc2bf26d",
+  "name": "base",
+  "run_list": [
+    "recipe[myapp::default]",
+    "recipe[patching::default]",
+    "recipe[hardening::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "hardening": {
+      "version": "0.1.0",
+      "identifier": "649df2326dfe0c15a2880cf0486bfbd230738dd3",
+      "dotted_decimal_identifier": "28321161224781324.6089679727249515.276880174583251",
+      "source": "../cookbooks/hardening",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/chef/lcr-effortless-config-getting-started.git",
+        "revision": "1ffb55190b220d38370711c5cc454aa4c8001508",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/main",
+          "origin/main"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/hardening"
+      }
+    },
+    "myapp": {
+      "version": "0.1.0",
+      "identifier": "c6b2af99cbda3a44194456dd2122fabf8af4e282",
+      "dotted_decimal_identifier": "55928512658004538.19168079722127650.275700577002114",
+      "source": "../cookbooks/myapp",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/chef/lcr-effortless-config-getting-started.git",
+        "revision": "1ffb55190b220d38370711c5cc454aa4c8001508",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/main",
+          "origin/main"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/myapp"
+      }
+    },
+    "os-hardening": {
+      "version": "4.0.0",
+      "identifier": "e20b98be94004b4013698889ce3ce232f88fbb27",
+      "dotted_decimal_identifier": "63626095396913227.18035742492708412.248708546411303",
+      "cache_key": "os-hardening-4.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/os-hardening/versions/4.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/os-hardening/versions/4.0.0/download",
+        "version": "4.0.0"
+      }
+    },
+    "patching": {
+      "version": "0.1.0",
+      "identifier": "d794c3bc26d765eab0f3c99c822d30ab3e2ed0ec",
+      "dotted_decimal_identifier": "60680688388986725.66059705656312365.53512040796396",
+      "source": "../cookbooks/patching",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/chef/lcr-effortless-config-getting-started.git",
+        "revision": "1ffb55190b220d38370711c5cc454aa4c8001508",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/main",
+          "origin/main"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/patching"
+      }
+    },
+    "windows-hardening": {
+      "version": "0.9.1",
+      "identifier": "fb514509b65b7fa504bdf236ec6ece70d9657452",
+      "dotted_decimal_identifier": "70739576111913855.46448585016274030.226984078963794",
+      "cache_key": "windows-hardening-0.9.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/windows-hardening/versions/0.9.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/windows-hardening/versions/0.9.1/download",
+        "version": "0.9.1"
+      }
+    },
+    "windows-security-policy": {
+      "version": "0.3.9",
+      "identifier": "b2e3ba1e3ced20a311a7903a59c8198183a82ec7",
+      "dotted_decimal_identifier": "50352934365228320.45899832580790728.28044050312903",
+      "cache_key": "windows-security-policy-0.3.9-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/windows-security-policy/versions/0.3.9/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/windows-security-policy/versions/0.3.9/download",
+        "version": "0.3.9"
+      }
+    }
+  },
+  "default_attributes": {
+    "hardening": {
+
+    },
+    "patching": {
+
+    },
+    "applications": {
+      "linux": {
+
+      },
+      "windows": {
+
+      }
+    },
+    "myapp": {
+      "message": "This node was hardened by Chef Infra. Policyfile created at 2022-03-06 12:56:02 UTC\n"
+    }
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "hardening",
+        "= 0.1.0"
+      ],
+      [
+        "myapp",
+        "= 0.1.0"
+      ],
+      [
+        "os-hardening",
+        "= 4.0.0"
+      ],
+      [
+        "patching",
+        "= 0.1.0"
+      ],
+      [
+        "windows-hardening",
+        "= 0.9.1"
+      ],
+      [
+        "windows-security-policy",
+        "= 0.3.9"
+      ]
+    ],
+    "dependencies": {
+      "hardening (0.1.0)": [
+        [
+          "os-hardening",
+          ">= 0.0.0"
+        ],
+        [
+          "windows-hardening",
+          ">= 0.0.0"
+        ]
+      ],
+      "myapp (0.1.0)": [
+        [
+          "hardening",
+          ">= 0.0.0"
+        ]
+      ],
+      "os-hardening (4.0.0)": [
+
+      ],
+      "patching (0.1.0)": [
+
+      ],
+      "windows-hardening (0.9.1)": [
+        [
+          "windows-security-policy",
+          ">= 0.0.0"
+        ]
+      ],
+      "windows-security-policy (0.3.9)": [
+
+      ]
+    }
+  }
+}

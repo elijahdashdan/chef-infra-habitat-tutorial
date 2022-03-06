@@ -1,0 +1,74 @@
+I, [2022-03-06T21:58:37.529167 #6728]  INFO -- base-centos-75: -----> Converging <base-centos-75>...
+I, [2022-03-06T21:58:37.530578 #6728]  INFO -- base-centos-75: Preparing files for transfer
+I, [2022-03-06T21:58:37.531284 #6728]  INFO -- base-centos-75: Preparing script
+I, [2022-03-06T21:58:38.070478 #6728]  INFO -- base-centos-75: Transferring files to <base-centos-75>
+I, [2022-03-06T21:58:38.183706 #6728]  INFO -- base-centos-75: Hab user exists
+I, [2022-03-06T21:58:38.187139 #6728]  INFO -- base-centos-75: Hab group exists
+I, [2022-03-06T21:58:38.187248 #6728]  INFO -- base-centos-75: Starting dansebs/base
+I, [2022-03-06T21:58:38.196551 #6728]  INFO -- base-centos-75: Latest hart file is 12:56
+I, [2022-03-06T21:58:38.196655 #6728]  INFO -- base-centos-75: Installing 12:56
+I, [2022-03-06T21:58:38.205581 #6728]  INFO -- base-centos-75: [0m[0m[1m[31m✗✗✗[0m
+I, [2022-03-06T21:58:38.205687 #6728]  INFO -- base-centos-75: [0m[0m[1m[31m✗✗✗ Invalid package identifier: "12:56". A valid identifier is in the form origin/name (example: acme/redis)[0m
+I, [2022-03-06T21:58:38.205741 #6728]  INFO -- base-centos-75: [0m[0m[1m[31m✗✗✗[0m
+I, [2022-03-06T21:58:38.206188 #6728]  INFO -- base-centos-75: Determining pkg_prefix for 12:56
+I, [2022-03-06T21:58:38.212754 #6728]  INFO -- base-centos-75: find: ‘/hab/pkgs/dansebs/base’: No such file or directory
+I, [2022-03-06T21:58:38.216118 #6728]  INFO -- base-centos-75: Found 
+I, [2022-03-06T21:58:38.216220 #6728]  INFO -- base-centos-75: Running chef for dansebs/base
+I, [2022-03-06T21:58:38.223027 #6728]  INFO -- base-centos-75: [0m[0m[1m[31m✗✗✗[0m
+I, [2022-03-06T21:58:38.223127 #6728]  INFO -- base-centos-75: [0m[0m[1m[31m✗✗✗ Cannot find a release of package: dansebs/base[0m
+I, [2022-03-06T21:58:38.223176 #6728]  INFO -- base-centos-75: [0m[0m[1m[31m✗✗✗[0m
+E, [2022-03-06T21:58:38.226877 #6728] ERROR -- base-centos-75: Converge failed on instance <base-centos-75>.
+E, [2022-03-06T21:58:38.227026 #6728] ERROR -- base-centos-75: ------Exception-------
+E, [2022-03-06T21:58:38.227058 #6728] ERROR -- base-centos-75: Class: Kitchen::ActionFailed
+E, [2022-03-06T21:58:38.227081 #6728] ERROR -- base-centos-75: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /tmp/kitchen/bootstrap.sh dansebs base
+']
+E, [2022-03-06T21:58:38.227103 #6728] ERROR -- base-centos-75: ----------------------
+E, [2022-03-06T21:58:38.227123 #6728] ERROR -- base-centos-75: ------Backtrace-------
+E, [2022-03-06T21:58:38.227144 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/provisioner/base.rb:100:in `rescue in call'
+E, [2022-03-06T21:58:38.227165 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/provisioner/base.rb:99:in `call'
+E, [2022-03-06T21:58:38.227186 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:419:in `block in converge_action'
+E, [2022-03-06T21:58:38.227206 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2022-03-06T21:58:38.227226 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:524:in `block in action'
+E, [2022-03-06T21:58:38.227247 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/3.0.0/benchmark.rb:293:in `measure'
+E, [2022-03-06T21:58:38.227267 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:523:in `action'
+E, [2022-03-06T21:58:38.227288 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:414:in `converge_action'
+E, [2022-03-06T21:58:38.227308 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2022-03-06T21:58:38.227349 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2022-03-06T21:58:38.227372 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2022-03-06T21:58:38.227393 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `each'
+E, [2022-03-06T21:58:38.227413 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2022-03-06T21:58:38.227434 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:161:in `verify'
+E, [2022-03-06T21:58:38.227454 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `public_send'
+E, [2022-03-06T21:58:38.227476 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2022-03-06T21:58:38.227496 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2022-03-06T21:58:38.227517 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/logging-2.3.0/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2022-03-06T21:58:38.227538 #6728] ERROR -- base-centos-75: ----End Backtrace-----
+E, [2022-03-06T21:58:38.227558 #6728] ERROR -- base-centos-75: ---Nested Exception---
+E, [2022-03-06T21:58:38.227578 #6728] ERROR -- base-centos-75: Class: Kitchen::Transport::SshFailed
+E, [2022-03-06T21:58:38.227597 #6728] ERROR -- base-centos-75: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /tmp/kitchen/bootstrap.sh dansebs base
+']
+E, [2022-03-06T21:58:38.227618 #6728] ERROR -- base-centos-75: ----------------------
+E, [2022-03-06T21:58:38.227637 #6728] ERROR -- base-centos-75: ------Backtrace-------
+E, [2022-03-06T21:58:38.227656 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/provisioner/base.rb:100:in `rescue in call'
+E, [2022-03-06T21:58:38.227677 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/provisioner/base.rb:99:in `call'
+E, [2022-03-06T21:58:38.227697 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:419:in `block in converge_action'
+E, [2022-03-06T21:58:38.227717 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2022-03-06T21:58:38.227737 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:524:in `block in action'
+E, [2022-03-06T21:58:38.227757 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/3.0.0/benchmark.rb:293:in `measure'
+E, [2022-03-06T21:58:38.227778 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:523:in `action'
+E, [2022-03-06T21:58:38.227798 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:414:in `converge_action'
+E, [2022-03-06T21:58:38.227825 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2022-03-06T21:58:38.227860 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2022-03-06T21:58:38.227882 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2022-03-06T21:58:38.227902 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `each'
+E, [2022-03-06T21:58:38.227923 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2022-03-06T21:58:38.227943 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:161:in `verify'
+E, [2022-03-06T21:58:38.227963 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `public_send'
+E, [2022-03-06T21:58:38.227983 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2022-03-06T21:58:38.228003 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2022-03-06T21:58:38.228023 #6728] ERROR -- base-centos-75: /opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/logging-2.3.0/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2022-03-06T21:58:38.228043 #6728] ERROR -- base-centos-75: ----End Backtrace-----
